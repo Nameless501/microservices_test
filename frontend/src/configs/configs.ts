@@ -14,10 +14,10 @@ export const navigationLinks = [
 ];
 
 export const apiRoutes = {
-    usersList: 'http://localhost:8001',
-    newUser: 'http://localhost:8001',
-    updateUser: 'http://localhost:8001',
-    logsList: 'http://localhost:8000',
+    usersList: 'https://microservicesusers-production.up.railway.app/',
+    newUser: 'https://microservicesusers-production.up.railway.app/',
+    updateUser: 'https://microservicesusers-production.up.railway.app/',
+    logsList: 'https://microservicestest-production.up.railway.app/',
 }
 
 export const newUserValidation = z.object({

@@ -7,7 +7,7 @@ function UpdateUser() {
 
     return (
         <UserForm
-            url={`${apiRoutes.updateUser}/${id}`}
+            url={`${apiRoutes.updateUser}${id}`}
             method="PATCH"
             schema={updateUserValidation}
         />

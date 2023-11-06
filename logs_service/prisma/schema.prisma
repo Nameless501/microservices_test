@@ -1,0 +1,20 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Logs {
+  id        Int      @id @default(autoincrement())
+  time      DateTime @default(now())
+  userId    Int
+  type      Type
+}
+
+enum Type {
+  create
+  update
+}

@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  logs_service:
+    build: ./logs_service/
+    container_name: logs_service
+    depends_on:
+      - postgres
+    ports:
+      - "3001:3001"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/logs
+
+  users_service:
+    build: ./users_service/
+    container_name: users_service
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/users
+      LOGS_API_URL: http://logs_service:3001
+
+volumes:
+  postgres-data:

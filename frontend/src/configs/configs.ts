@@ -14,10 +14,10 @@ export const navigationLinks = [
 ];
 
 export const apiRoutes = {
-    usersList: import.meta.env.API_USERS_LIST ?? 'http://localhost:8001',
-    newUser: import.meta.env.API_NEW_USER ?? 'http://localhost:8001',
-    updateUser: import.meta.env.API_UPDATE_USER ?? 'http://localhost:8001',
-    logsList: import.meta.env.API_LOGS_LIST ?? 'http://localhost:8000',
+    usersList: 'http://localhost:8001',
+    newUser: 'http://localhost:8001',
+    updateUser: 'http://localhost:8001',
+    logsList: 'http://localhost:8000',
 }
 
 export const newUserValidation = z.object({

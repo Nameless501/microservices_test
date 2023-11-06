@@ -15,7 +15,7 @@
 -   Изменение данных существующих пользователей
 -   Логирование истории действий (создания и изменения пользователей)
 -   Валидация запросов
--   <a href="https://microservicestest-production-8cd6.up.railway.app/">Демонстрационный frontend</a> для проверки работы
+-   Деплой сервисов и <a href="https://microservicestest-production-8cd6.up.railway.app/">демонстрационный frontend</a> для проверки работы
 
 
 ### Эндпоинты

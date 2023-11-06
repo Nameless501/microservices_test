@@ -18,6 +18,7 @@ class LogsServices {
             skip: (page - 1) * RECORDS_PER_PAGE,
             take: RECORDS_PER_PAGE,
             where: { userId },
+            orderBy: { time: 'desc' }
         });
 
     countLogs = async ({ userId }) =>

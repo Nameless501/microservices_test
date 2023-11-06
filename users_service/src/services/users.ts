@@ -8,7 +8,7 @@ class UsersServices {
     public createUser = (data: Prisma.UserCreateInput) =>
         this.userSchema.create({ data });
 
-    public findUsers = () => this.userSchema.findMany();
+    public findUsers = () => this.userSchema.findMany({ orderBy: { id: 'asc' } });
 
     public updateUser = async (
         id: number,
